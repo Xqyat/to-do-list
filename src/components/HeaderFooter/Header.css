@@ -1,0 +1,148 @@
+header {
+    display: flex;
+    color: white;
+    padding: 1em 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navList {
+    display: flex;
+    gap: 3rem;
+}
+
+.navListRightWrapper {
+    
+    display: flex;
+    justify-content: flex-end;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+    color: rgb(0, 0, 0);
+}
+
+a:hover {    
+    color: #beae16;
+}
+
+
+.burger {
+    display: none;
+}
+    
+.menu-mobile {
+    display: none;
+}
+      
+
+@media (max-width: 650px) {
+header {
+    align-items: center;
+    padding: 1em 1rem;
+}
+
+.Logo {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    order: 2;
+}
+
+.navListLeftWrapper {
+    order: 1;
+}
+
+.left {
+    display: none;
+}
+
+.navListRightWrapper {
+    order: 3;
+}
+
+.register-link {
+    display: none;
+}
+
+.burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    margin-bottom: 8px;
+    position: relative;
+    z-index: 102;
+    transition: 0.3s;
+  }
+  .burger span {
+    display: block;
+    background: #beae16;
+    height: 4px;
+    margin: 5px 0;
+    border-radius: 2px;
+    transition: 0.4s cubic-bezier(0.77,0.2,0.05,1.0);
+    width: 100%;
+  }
+
+  .burger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .burger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .burger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+
+  .menu-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    padding: 18px 0 10px 0;
+    position: absolute;
+    top: 92px;
+    left: 0;
+    right: 400px;
+    z-index: 101;
+    transform: translateX(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.4s;
+    box-shadow: 0 16px 32px rgba(50, 50, 50, 0.09);
+  }
+
+  .menu-mobile.show {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .menu-mobile a {
+    color: #000000;
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin: 8px 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+  }
+  .menu-mobile a:hover {
+    color: #ffffff;
+  }
+}
+
+  
