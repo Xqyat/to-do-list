@@ -1,0 +1,109 @@
+.create-edit-container {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .create-edit-container h1 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .form-group label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #555;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border 0.3s;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+  }
+  
+  .image-preview {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  
+  .image-preview img {
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .btn-save,
+  .btn-cancel {
+    padding: 12px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .btn-save {
+    background: linear-gradient(90deg, #4CAF50, #45a049);
+    color: white;
+  }
+  
+  .btn-save:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(76, 175, 80, 0.3);
+  }
+  
+  .btn-cancel {
+    background: #f44336;
+    color: white;
+  }
+  
+  .btn-cancel:hover {
+    background: #d32f2f;
+    transform: translateY(-2px);
+  }
+  
+  @media (max-width: 650px) {
+    .create-edit-container {
+      padding: 1rem;
+    }
+  
+    .form-actions {
+      flex-direction: column;
+    }
+  }
+  

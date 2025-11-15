@@ -1,10 +1,18 @@
 import Logo from '../assets/img/LOGO.jpg'
 import React, { useState } from 'react';
 import './Header.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const navigate = useNavigate();
+    const token = localStorage.getItem('token');
+
+    const handleLogout = () => {
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        navigate('/signin');
+    };
     return (
         <>
             <header>
@@ -31,15 +39,18 @@ export default function Header() {
                         <Link to="/user" onClick={() => setMenuOpen(false)}>Записи</Link>
                     </div>
                     </nav>
-                <nav className='navListRightWrapper'>
+                {/* <nav className='navListRightWrapper'>
                     <ul className='navList'>
                         <li className='navList-element'><Link to="/login">Вход</Link></li>
                         <li className='navList-element register-link'><Link to="/register">Регистрация</Link></li>
                     </ul>
-                </nav>
+                </nav> */}
+                {token && (
+                    <button onClick={handleLogout} className="btn-logout">
+                    Выйти
+                    </button>
+                )}
             </header>
         </>
     )    
-    
-
 }
