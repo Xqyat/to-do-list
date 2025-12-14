@@ -6,6 +6,13 @@ import SignUp from './components/SignUp/SignUp';
 import SignIn from './components/SignIn/SignIn';
 import PrivateRoute from './components/PrivateRoute';
 import Error404 from './components/Error404/Error404';
+import ProductsList from './components/catalog/ProductsList';
+import ProductDetails from './components/catalog/ProductDetails';
+import ProductForm from './components/catalog/ProductForm';
+import Favorites from './components/catalog/Favorites';
+import LandingPage from './components/landing/LandingPage';
+import SectionsAdmin from './components/admin/SectionsAdmin';
+import SectionForm from './components/admin/SectionForm';
 
 function App() {
   return (
@@ -27,6 +34,7 @@ function AppContent() {
       {shouldShowHeader && <Header />}
       
       <Routes>
+        <Route path="/" element={<LandingPage />} />
         <Route path="/" element={<Navigate to="/main" />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signin" element={<SignIn />} />
@@ -46,6 +54,70 @@ function AppContent() {
             <CreateEditNote />
           </PrivateRoute>
         } />
+        <Route
+            path="/catalog"
+            element={
+              <PrivateRoute>
+                <ProductsList />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/products/create"
+            element={
+              <PrivateRoute>
+                <ProductForm />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/products/edit/:id"
+            element={
+              <PrivateRoute>
+                <ProductForm />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/products/:id"
+            element={
+              <PrivateRoute>
+                <ProductDetails />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/favorites"
+            element={
+              <PrivateRoute>
+                <Favorites />
+              </PrivateRoute>
+            }
+          /> 
+          <Route
+              path="/admin/sections"
+              element={
+                <PrivateRoute>
+                  <SectionsAdmin />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/admin/sections/create"
+              element={
+                <PrivateRoute>
+                  <SectionForm />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/admin/sections/edit/:id"
+              element={
+                <PrivateRoute>
+                  <SectionForm />
+                </PrivateRoute>
+              }
+            />
         <Route path="/404" element={<Error404 />} />
         
         <Route path="*" element={<Navigate to="/404" replace />} />

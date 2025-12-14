@@ -21,11 +21,15 @@ export default function Header() {
                     <ul className='navList left'>
                         <li className='navList-element'><Link to="/main">Главная</Link></li>
                         <li className='navList-element'><Link to="/create">Новая запись</Link></li>
+                        <li className='navList-element'><Link to="/catalog">Каталог</Link></li>
+                        <li className='navList-element'><Link to="/favorites">Избранные</Link></li>
+                        <li className='navList-element'><Link to="/">Лендинг</Link></li>
+                        <li className='navList-element'><Link to="/admin/sections">Админ-панель</Link></li>
                     </ul>
                     <div className={`burger ${menuOpen ? 'open' : ''}`} onClick={() => setMenuOpen(!menuOpen)}>
-                        <span></span>  {/* ← Первая линия */}
-                        <span></span>  {/* ← Средняя линия */}
-                        <span></span>  {/* ← Третья линия */}
+                        <span></span>  
+                        <span></span>  
+                        <span></span>  
                     </div>
                     <div className={`menu-mobile${menuOpen ? ' show' : ''}`}>
                         <Link to="/main" onClick={() => setMenuOpen(false)}>Главная</Link>

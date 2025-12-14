@@ -1,0 +1,82 @@
+.admin-sections-container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  .admin-sections-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .sections-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  
+  .sections-table th,
+  .sections-table td {
+    padding: 0.7rem 0.9rem;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+  }
+  
+  .sections-table th {
+    background: #f5f5f5;
+    font-weight: 600;
+  }
+  
+  .sections-table tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .admin-loading {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  /* форма */
+  .section-form {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  
+  .section-form .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .section-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+  }
+  
+  .section-form input,
+  .section-form select,
+  .section-form textarea {
+    width: 100%;
+    padding: 0.5rem 0.7rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+  }
+  
+  .section-form .form-actions {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
+  
+  .btn-link.small {
+    font-size: 0.85rem;
+    padding: 0.1rem 0.4rem;
+  }
+  
